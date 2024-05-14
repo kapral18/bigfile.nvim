@@ -31,7 +31,7 @@ local function get_buf_size(bufnr)
   if not (ok and stats) then
     return
   end
-  return math.floor(0.5 + (stats.size / (1024 * 1024)))
+  return stats.size / (1024 * 1024)
 end
 
 ---@param bufnr number
